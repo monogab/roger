@@ -169,7 +169,7 @@ func (s *session) prepareStringCommand(cmd string) []byte {
 	requiredLength := len(rawCmdBytes) + 1
 	//make sure length is divisible by 4
 	if requiredLength&3 > 0 {
-		requiredLength = (requiredLength & 0xfffffc) + 4
+		requiredLength = (requiredLength & 0xfffffffc) + 4
 	}
 	hdrLength := assign.GetHeaderLength(constants.DtString, requiredLength)
 	cmdBytes := make([]byte, requiredLength+1+hdrLength)
