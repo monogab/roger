@@ -1,4 +1,4 @@
-module github.com/senseyeio/roger
+module github.com/monogab/roger
 
 go 1.13
 
